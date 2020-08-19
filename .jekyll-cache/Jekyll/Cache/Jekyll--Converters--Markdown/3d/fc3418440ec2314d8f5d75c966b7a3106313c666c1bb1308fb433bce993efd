@@ -1,0 +1,95 @@
+I"Ý<p>Chrome extensions have over 1.2 billion installs. Not many people have actually reviewed the authenticity and risk associated with the chrome extensions they use.  This blog post describes some of the tools and techniques that can be used to review chrome extensions for signs of possible malicious activity or user privacy data abuse.</p>
+
+<h1 id="static-analysis">Static Analysis</h1>
+
+<p>Reading the JavaScript used by a chrome extension will often provide the best insight but code obfuscation may make this challenging. Fortunately there are methods for reviewing chrome extension without JavaScript knowledge!</p>
+
+<h2 id="extanalysis">ExtAnalysis</h2>
+
+<p>My go-to tool for reviewing chrome extensions is the Browser Extension Analysis Framework (<a href="https://github.com/Tuhinshubhra/ExtAnalysis">ExtAnalysis</a>). This open source framework is written in Python 3 and runs as a local web application. I use ExtAnalysis to perform static analysis of extensions and get a better understanding of their functionality.</p>
+
+<p><img src="https://github.com/colincowie/colincowie.github.io/raw/master/assets/blog/ext_info.png" alt="extanalysis info" /></p>
+
+<p>ExtAnalysis has a lot of useful features such as automatically parsing extension permissions and extracting  information such as urls and domains.</p>
+
+<p><img src="https://github.com/colincowie/colincowie.github.io/raw/master/assets/blog/ext_perms.png" alt="extanalysis permissions" /></p>
+
+<p>Using Neo4j, ExtAnalysis plots the extensions files and communications in an interactive graph. This feature is good for getting a high-level understanding of the extensions structure. ExtAnalysis has an embedded file viewer with functionality to "beautify" (re-structure/organize) files.</p>
+
+<p><img src="https://github.com/colincowie/colincowie.github.io/raw/master/assets/blog/extanalysis_files.png" alt="extanalysis files" /></p>
+
+<p>The "URLs and Domains" tab provides information on network connections that an extension may be making and has integration with VirusTotal and WHOIS records! (Perhaps integration with urlscan.io will be in a future pull request)</p>
+
+<p><img src="https://github.com/colincowie/colincowie.github.io/raw/master/assets/blog/ext_domains.png" alt="extanalysis domains" /></p>
+
+<p>The general methodology I use to review extensions with ExtAnalysis is:</p>
+
+<blockquote>
+  <p>1) Start analysis on an extensions by submitting the extensions chrome webstore url or ID</p>
+
+  <p>2) Look at the structure of extension files in the file viewer graph</p>
+
+  <p>3) Review the permissions</p>
+
+  <p>4) Review extracted urls and domains</p>
+
+  <p>5) Review javascript used by the extensions
+(The section "EXTRACTED URLS FROM FILES" in a ExtAnalysis report can help with finding the right javascript file)</p>
+</blockquote>
+
+<h2 id="crxcavatorio">crxcavator.io</h2>
+
+<p>Suppose you don't want to run ExtAnalysis or only have a browser to work with, no worries - there are other tools you can use!</p>
+
+<p><a href="crxcavator.io">crxcavator</a> is an online application owned by DuoSec that can be used to review chrome extensions. Similarly to ExtAnalysis, crxcavator allows users to submit an extension for review and will parse permissions among other things.</p>
+
+<p>My favorite features of crxcavator are the "entry points" and "dangerous functions". These sections will include code segments of risky chrome API calls in use or possible malicious javascript.</p>
+
+<p><img src="https://github.com/colincowie/colincowie.github.io/raw/master/assets/blog/crx_entry.png" alt="crx entry" /></p>
+
+<h1 id="dynamic-analysis">Dynamic Analysis</h1>
+
+<p>Reviewing the source code of an extension can help provide a good understanding of overall functionality but dynamic analysis may be the key in taking your analysis to the next level.</p>
+
+<h2 id="chrome-developer-tools">Chrome Developer Tools</h2>
+
+<p>After installing a chrome extension, the chrome developer tools can be leveraged to view whats going on  "behind the scenes". The steps for accessing the runtime environment of an installed chrome extension is:</p>
+
+<blockquote>
+  <p>1) Visit <code class="highlighter-rouge">chrome://extensions</code></p>
+
+  <p>2) Enable Developer Mode (top right of page)</p>
+
+  <p>3) Click on "Inspect views background page" of the extension you're interested in.</p>
+
+  <p>4) Navigate to the "Network" section of the chrome developer tools</p>
+
+  <p>5) Enable "Preserve Log"</p>
+</blockquote>
+
+<p>This will record the network request being made by the extension in analysis.</p>
+
+<p>The "Sources" section of the chrome developer tools will show some of the extensions files in use. The chrome developer console can be used to interact with the JavaScript environment of the extension.</p>
+
+<h2 id="python-and-chrome-webdriver">Python and Chrome Webdriver</h2>
+
+<p>Using Python, specifically selenium chrome webdriver, you can run extensions in a new instance of chrome with a network proxy intercepting browser traffic.</p>
+
+<p>This can be done in python as followed:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from selenium import webdriver
+options = webdriver.ChromeOptions()
+options.add_argument('load-extension=/path/to/extension));
+options.add_argument('--proxy-server=127.0.0.1:8080')
+options.add_argument('--allow-running-insecure-content')
+options.add_argument('--ignore-certificate-errors')
+driver = webdriver.Chrome(options=options)
+driver.get("chrome://extensions/")
+</code></pre></div></div>
+
+<p>So far we've gone over a couple different tools and tricks for taking a look at chrome extensions.</p>
+
+<p><strong>In a future blog post, I will write more about automating dynamic analysis with python and mitmproxy.</strong></p>
+
+<p>But in the meantime, feel free to reach out on twitter if you want to discuss further!</p>
+:ET

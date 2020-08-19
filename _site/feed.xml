@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-08-19T13:55:32-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Colins Security Blog</title><entry><title type="html">Tweetdeck For Threat Intel</title><link href="http://localhost:4000/posts/Tweetdeck-for-Threat-Intel" rel="alternate" type="text/html" title="Tweetdeck For Threat Intel" /><published>2020-05-12T00:00:00-04:00</published><updated>2020-05-12T00:00:00-04:00</updated><id>http://localhost:4000/posts/Tweetdeck-for-Threat-Intel</id><content type="html" xml:base="http://localhost:4000/posts/Tweetdeck-for-Threat-Intel">&lt;meta name=&quot;twitter:image&quot; content=&quot;https://github.com/colincowie/colincowie.github.io/raw/master/assets/blog/tweetdeck/tweetdeck_cover.jpg&quot; /&gt;
+
+&lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; /&gt;
+
+&lt;meta name=&quot;twitter:description&quot; content=&quot;Setting up Tweetdeck for threat intelligence and information security.&quot; /&gt;
+
+&lt;p&gt;Twitter is undeniably a great resource for learning about security. A lot of people share information on malware, phishing, new vulnerabilities, exploits and more. Sometimes it can be difficult to filter out the non-security social media content. This blog post walks through setting up Tweetdeck for threat intelligence so that you can stay informed without giving up your Twitter memes!&lt;/p&gt;
+
+&lt;h1 id=&quot;tweetdeck&quot;&gt;Tweetdeck&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://tweetdeck.twitter.com/&quot;&gt;Tweetdeck&lt;/a&gt; is a dashboard application for management of Twitter accounts. It was originally an independent app and was acquired by Twitter in 2011. Tweetdeck is composed of columns that you can customize to show different content.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/colincowie/colincowie.github.io/raw/master/assets/blog/tweetdeck/tweetdeck.png&quot; alt=&quot;tweetdeck&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There are a few different types of columns you can create with the &quot;Add column&quot; button. The search feature is what I use for a threat intelligence focused setup.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/colincowie/colincowie.github.io/raw/master/assets/blog/tweetdeck/column.png&quot; alt=&quot;columns&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;search-filters&quot;&gt;Search Filters&lt;/h1&gt;
+&lt;p&gt;Searching can be used to find text or hashtags and has 3 search modifies, AND/OR/NOT. More information the search filter syntax can be found in the &lt;a href=&quot;https://help.twitter.com/en/using-twitter/twitter-advanced-search&quot;&gt;Twitter Documentation&lt;/a&gt;. Below are the search filters I use with Tweetdeck:&lt;/p&gt;
+
+&lt;h3 id=&quot;malware-and-phishing&quot;&gt;Malware and Phishing&lt;/h3&gt;
+
+&lt;p&gt;&quot;Open directories&quot; are listing of files on a web server. Sometimes directories are intentionally left open but mostly are an outcome of laziness. Threat actors sometimes leave directories open with malware or phishing kits hosted. &lt;code class=&quot;highlighter-rouge&quot;&gt;#opendir&lt;/code&gt; is a gold mine of good intel on twitter.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/colincowie/colincowie.github.io/raw/master/assets/blog/tweetdeck/opendir.png&quot; alt=&quot;opendir&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Phishing sites shared on urlscan.io:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;urlscan.io AND phishing&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Phishing Kits:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;#PhishingKit&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Online malware &amp;amp; sandboxes:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;virustotal.com OR app.any.run OR hybrid-analysis&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Indicators of Compromise:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;malware AND IOC&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;vulnerabilities-and-exploits&quot;&gt;Vulnerabilities and Exploits&lt;/h3&gt;
+
+&lt;p&gt;Common vulnerabilities and exposures (cve) and proof of concept (poc):&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;cve-&quot; AND poc&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Open source exploits:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;exploit AND (gitlab.com OR github.com)&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;other-good-queries&quot;&gt;Other Good Queries&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;#bugbountytip OR #bugbountytips&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Hopefully this post has shown how powerful tweetdeck can be with the right searches! Have any cool/useful tweetdeck search queries? Let me know on twitter! - @th3_protoCOL&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Chrome Extension Analysis</title><link href="http://localhost:4000/posts/Chrome-Extension-Analysis" rel="alternate" type="text/html" title="Chrome Extension Analysis" /><published>2020-03-28T00:00:00-04:00</published><updated>2020-03-28T00:00:00-04:00</updated><id>http://localhost:4000/posts/Chrome-Extension-Analysis</id><content type="html" xml:base="http://localhost:4000/posts/Chrome-Extension-Analysis">&lt;p&gt;Chrome extensions have over 1.2 billion installs. Not many people have actually reviewed the authenticity and risk associated with the chrome extensions they use.  This blog post describes some of the tools and techniques that can be used to review chrome extensions for signs of possible malicious activity or user privacy data abuse.&lt;/p&gt;
+
+&lt;h1 id=&quot;static-analysis&quot;&gt;Static Analysis&lt;/h1&gt;
+
+&lt;p&gt;Reading the JavaScript used by a chrome extension will often provide the best insight but code obfuscation may make this challenging. Fortunately there are methods for reviewing chrome extension without JavaScript knowledge!&lt;/p&gt;
+
+&lt;h2 id=&quot;extanalysis&quot;&gt;ExtAnalysis&lt;/h2&gt;
+
+&lt;p&gt;My go-to tool for reviewing chrome extensions is the Browser Extension Analysis Framework (&lt;a href=&quot;https://github.com/Tuhinshubhra/ExtAnalysis&quot;&gt;ExtAnalysis&lt;/a&gt;). This open source framework is written in Python 3 and runs as a local web application. I use ExtAnalysis to perform static analysis of extensions and get a better understanding of their functionality.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/colincowie/colincowie.github.io/raw/master/assets/blog/ext_info.png&quot; alt=&quot;extanalysis info&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;ExtAnalysis has a lot of useful features such as automatically parsing extension permissions and extracting  information such as urls and domains.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/colincowie/colincowie.github.io/raw/master/assets/blog/ext_perms.png&quot; alt=&quot;extanalysis permissions&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Using Neo4j, ExtAnalysis plots the extensions files and communications in an interactive graph. This feature is good for getting a high-level understanding of the extensions structure. ExtAnalysis has an embedded file viewer with functionality to &quot;beautify&quot; (re-structure/organize) files.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/colincowie/colincowie.github.io/raw/master/assets/blog/extanalysis_files.png&quot; alt=&quot;extanalysis files&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The &quot;URLs and Domains&quot; tab provides information on network connections that an extension may be making and has integration with VirusTotal and WHOIS records! (Perhaps integration with urlscan.io will be in a future pull request)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/colincowie/colincowie.github.io/raw/master/assets/blog/ext_domains.png&quot; alt=&quot;extanalysis domains&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The general methodology I use to review extensions with ExtAnalysis is:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;1) Start analysis on an extensions by submitting the extensions chrome webstore url or ID&lt;/p&gt;
+
+  &lt;p&gt;2) Look at the structure of extension files in the file viewer graph&lt;/p&gt;
+
+  &lt;p&gt;3) Review the permissions&lt;/p&gt;
+
+  &lt;p&gt;4) Review extracted urls and domains&lt;/p&gt;
+
+  &lt;p&gt;5) Review javascript used by the extensions
+(The section &quot;EXTRACTED URLS FROM FILES&quot; in a ExtAnalysis report can help with finding the right javascript file)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;crxcavatorio&quot;&gt;crxcavator.io&lt;/h2&gt;
+
+&lt;p&gt;Suppose you don't want to run ExtAnalysis or only have a browser to work with, no worries - there are other tools you can use!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;crxcavator.io&quot;&gt;crxcavator&lt;/a&gt; is an online application owned by DuoSec that can be used to review chrome extensions. Similarly to ExtAnalysis, crxcavator allows users to submit an extension for review and will parse permissions among other things.&lt;/p&gt;
+
+&lt;p&gt;My favorite features of crxcavator are the &quot;entry points&quot; and &quot;dangerous functions&quot;. These sections will include code segments of risky chrome API calls in use or possible malicious javascript.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/colincowie/colincowie.github.io/raw/master/assets/blog/crx_entry.png&quot; alt=&quot;crx entry&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;dynamic-analysis&quot;&gt;Dynamic Analysis&lt;/h1&gt;
+
+&lt;p&gt;Reviewing the source code of an extension can help provide a good understanding of overall functionality but dynamic analysis may be the key in taking your analysis to the next level.&lt;/p&gt;
+
+&lt;h2 id=&quot;chrome-developer-tools&quot;&gt;Chrome Developer Tools&lt;/h2&gt;
+
+&lt;p&gt;After installing a chrome extension, the chrome developer tools can be leveraged to view whats going on  &quot;behind the scenes&quot;. The steps for accessing the runtime environment of an installed chrome extension is:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;1) Visit &lt;code class=&quot;highlighter-rouge&quot;&gt;chrome://extensions&lt;/code&gt;&lt;/p&gt;
+
+  &lt;p&gt;2) Enable Developer Mode (top right of page)&lt;/p&gt;
+
+  &lt;p&gt;3) Click on &quot;Inspect views background page&quot; of the extension you're interested in.&lt;/p&gt;
+
+  &lt;p&gt;4) Navigate to the &quot;Network&quot; section of the chrome developer tools&lt;/p&gt;
+
+  &lt;p&gt;5) Enable &quot;Preserve Log&quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This will record the network request being made by the extension in analysis.&lt;/p&gt;
+
+&lt;p&gt;The &quot;Sources&quot; section of the chrome developer tools will show some of the extensions files in use. The chrome developer console can be used to interact with the JavaScript environment of the extension.&lt;/p&gt;
+
+&lt;h2 id=&quot;python-and-chrome-webdriver&quot;&gt;Python and Chrome Webdriver&lt;/h2&gt;
+
+&lt;p&gt;Using Python, specifically selenium chrome webdriver, you can run extensions in a new instance of chrome with a network proxy intercepting browser traffic.&lt;/p&gt;
+
+&lt;p&gt;This can be done in python as followed:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from selenium import webdriver
+options = webdriver.ChromeOptions()
+options.add_argument('load-extension=/path/to/extension));
+options.add_argument('--proxy-server=127.0.0.1:8080')
+options.add_argument('--allow-running-insecure-content')
+options.add_argument('--ignore-certificate-errors')
+driver = webdriver.Chrome(options=options)
+driver.get(&quot;chrome://extensions/&quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;So far we've gone over a couple different tools and tricks for taking a look at chrome extensions.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;In a future blog post, I will write more about automating dynamic analysis with python and mitmproxy.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;But in the meantime, feel free to reach out on twitter if you want to discuss further!&lt;/p&gt;</content><author><name></name></author><summary type="html">Chrome extensions have over 1.2 billion installs. Not many people have actually reviewed the authenticity and risk associated with the chrome extensions they use. This blog post describes some of the tools and techniques that can be used to review chrome extensions for signs of possible malicious activity or user privacy data abuse.</summary></entry><entry><title type="html">Test page to see how the raw markdown is rendered</title><link href="http://localhost:4000/posts/Test-page-to-see-how-the-markdown-is-rendered" rel="alternate" type="text/html" title="Test page to see how the raw markdown is rendered" /><published>2020-01-01T00:00:00-05:00</published><updated>2020-01-01T00:00:00-05:00</updated><id>http://localhost:4000/posts/Test-page-to-see-how-the-markdown-is-rendered</id><content type="html" xml:base="http://localhost:4000/posts/Test-page-to-see-how-the-markdown-is-rendered">&lt;p&gt;This is intended as a quick reference and showcase.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Table of Contents&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;[[Headers::#heading]]&lt;/li&gt;
+  &lt;li&gt;[[Emphasis::#emphasis]]&lt;/li&gt;
+  &lt;li&gt;[[Lists::#lists]]&lt;/li&gt;
+  &lt;li&gt;[[Links::#links]]&lt;/li&gt;
+  &lt;li&gt;[[Images::#images]]&lt;/li&gt;
+  &lt;li&gt;[[Code and Syntax Highlighting::#syntax]]&lt;/li&gt;
+  &lt;li&gt;[[Tables::#tables]]&lt;/li&gt;
+  &lt;li&gt;[[Blockquotes::#blockquotes]]&lt;/li&gt;
+  &lt;li&gt;[[Inline HTML::#inline]]&lt;/li&gt;
+  &lt;li&gt;[[Horizontal Rule::#hr]]&lt;/li&gt;
+  &lt;li&gt;[[Line Breaks::#br]]&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;heading&quot;&gt;Headings&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;regular-sans highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# H1 
+## H2 
+### H3 
+#### H4 
+##### H5 
+###### H6
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;h1&quot;&gt;H1&lt;/h1&gt;
+&lt;h2 id=&quot;h2&quot;&gt;H2&lt;/h2&gt;
+&lt;h3 id=&quot;h3&quot;&gt;H3&lt;/h3&gt;
+&lt;h4 id=&quot;h4&quot;&gt;H4&lt;/h4&gt;
+&lt;h5 id=&quot;h5&quot;&gt;H5&lt;/h5&gt;
+&lt;h6 id=&quot;h6&quot;&gt;H6&lt;/h6&gt;
+
+&lt;h3 id=&quot;emphasis&quot;&gt;Emphasis&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;regular-sans highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Emphasis, aka italics, with *asterisks* or _underscores_. 
+
+Strong emphasis, aka bold, with **asterisks** or __underscores__. 
+
+Combined emphasis with **asterisks and _underscores_**.
+
+Strikethrough uses two tildes. ~~Scratch this.~~ 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Emphasis, aka italics, with &lt;em&gt;asterisks&lt;/em&gt; or &lt;em&gt;underscores&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Strong emphasis, aka bold, with &lt;strong&gt;asterisks&lt;/strong&gt; or &lt;strong&gt;underscores&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Combined emphasis with &lt;strong&gt;asterisks and &lt;em&gt;underscores&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Strikethrough uses two tildes. &lt;del&gt;Scratch this.&lt;/del&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;lists&quot;&gt;Lists&lt;/h3&gt;
+
+&lt;div class=&quot;regular-sans highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. First ordered list item 
+...1. Ordered sublist 
+2. Another item 
+...* Unordered sublist 
+3. Actual numbers don't matter, just that it's a number 
+4. And another item. 
+
+⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown). 
+
+⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅ 
+⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅ 
+⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.) 
+
+* Unordered list can use asterisks 
+- Or minuses
++ Or pluses
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;First ordered list item
+    &lt;ol&gt;
+      &lt;li&gt;Ordered sublist&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Another item
+    &lt;ul&gt;
+      &lt;li&gt;Unordered sublist&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Actual numbers don't matter, just that it's a number&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;And another item.&lt;/p&gt;
+
+    &lt;p&gt;You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).&lt;/p&gt;
+
+    &lt;p&gt;To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
+ Note that this line is separate, but within the same paragraph.⋅⋅
+ (This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Unordered list can use asterisks&lt;/li&gt;
+  &lt;li&gt;Or minuses&lt;/li&gt;
+  &lt;li&gt;Or pluses&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;links&quot;&gt;Links&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;regular-sans highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[I'm an inline-style link](https://www.google.com)
+
+[I'm an inline-style link with title](https://www.google.com &quot;Google's Homepage&quot;)
+
+[I'm a reference-style link][Arbitrary case-insensitive reference text]
+
+[I'm a relative reference to a repository file](../blob/master/LICENSE)
+
+[You can use numbers for reference-style link definitions][1]
+
+Or leave it empty and use the [link text itself].
+
+URLs and URLs in angle brackets will automatically get turned into links. 
+http://www.example.com or &amp;lt;http://www.example.com&amp;gt; and sometimes 
+example.com (but not on Github, for example).
+
+Some text to show that the reference links can follow later.
+
+[arbitrary case-insensitive reference text]: https://www.mozilla.org
+[1]: http://slashdot.org
+[link text itself]: http://www.reddit.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.google.com&quot;&gt;I'm an inline-style link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.google.com&quot; title=&quot;Google's Homepage&quot;&gt;I'm an inline-style link with title&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.mozilla.org&quot;&gt;I'm a reference-style link&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;../blob/master/LICENSE&quot;&gt;I'm a relative reference to a repository file&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://slashdot.org&quot;&gt;You can use numbers for reference-style link definitions&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Or leave it empty and use the &lt;a href=&quot;http://www.reddit.com&quot;&gt;link text itself&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;URLs and URLs in angle brackets will automatically get turned into links. 
+http://www.example.com or &lt;a href=&quot;http://www.example.com&quot;&gt;http://www.example.com&lt;/a&gt; and sometimes 
+example.com (but not on Github, for example).&lt;/p&gt;
+
+&lt;p&gt;Some text to show that the reference links can follow later.&lt;/p&gt;
+
+&lt;h3 id=&quot;images&quot;&gt;Images&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;regular-sans highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Here's our logo (hover to see the title text):
+
+Inline-style: 
+![alt text](/assets/img/profile.png &quot;Logo Title Text 1&quot;)
+
+Reference-style: 
+![alt text][logo]
+
+[logo]: /assets/img/profile.png &quot;Logo Title Text 2&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here's our logo (hover to see the title text):&lt;/p&gt;
+
+&lt;p&gt;Inline-style: 
+&lt;img src=&quot;/assets/img/profile.png&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Reference-style: 
+&lt;img src=&quot;/assets/img/profile.png&quot; alt=&quot;alt text&quot; title=&quot;Logo Title Text 2&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;syntax&quot;&gt;Code and Syntax Highlighting&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;Code blocks are part of the Markdown spec, but syntax highlighting isn't. However, many renderers – like Github's and Markdown Here – support syntax highlighting. Which languages are supported and how those language names should be written will vary from renderer to renderer. Markdown Here supports highlighting for dozens of languages (and not-really-languages, like diffs and HTTP headers);&lt;/p&gt;
+
+&lt;div class=&quot;regular-sans highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Inline `code` has `back-ticks around` it.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Inline &lt;code class=&quot;highlighter-rouge&quot;&gt;code&lt;/code&gt; has &lt;code class=&quot;highlighter-rouge&quot;&gt;back-ticks around&lt;/code&gt; it.&lt;/p&gt;
+
+&lt;p&gt;Blocks of code are either fenced by lines with three back-ticks ```, or are indented with four spaces. I recommend only using the fenced code blocks – they're easier and only they support syntax highlighting.&lt;/p&gt;
+
+&lt;pre class=&quot;regular-sans&quot;&gt; 
+&lt;code&gt;
+```javascript
+var s = &quot;JavaScript syntax highlighting&quot;;
+alert(s);
+```
+ 
+```python
+s = &quot;Python syntax highlighting&quot;
+print s
+```
+ 
+```
+No language indicated, so no syntax highlighting. 
+But let's throw in a &lt;b&gt;tag&lt;/b&gt;.
+```
+&lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;JavaScript syntax highlighting&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;alert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Python syntax highlighting&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;No language indicated, so no syntax highlighting. 
+But let's throw in a &amp;lt;b&amp;gt;tag&amp;lt;/b&amp;gt;.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;tables&quot;&gt;Tables&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;Tables aren't part of the core Markdown spec, but they are part of GFM and Markdown Here supports them. They are an easy way of adding tables to your email – a task that would otherwise require copy-pasting from another application.&lt;/p&gt;
+
+&lt;div class=&quot;regular-sans highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Colons can be used to align columns.
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don't need to make the 
+raw Markdown line up prettily. You can also use inline Markdown.
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Colons can be used to align columns.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Tables&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Are&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Cool&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;col 3 is&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;right-aligned&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;$1600&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;col 2 is&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;centered&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;$12&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;zebra stripes&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;are neat&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;$1&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;There must be at least 3 dashes separating each header cell.
+The outer pipes (|) are optional, and you don't need to make the 
+raw Markdown line up prettily. You can also use inline Markdown.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Markdown&lt;/th&gt;
+      &lt;th&gt;Less&lt;/th&gt;
+      &lt;th&gt;Pretty&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;em&gt;Still&lt;/em&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;renders&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;nicely&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;blockquotes&quot;&gt;Blockquotes&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;regular-sans highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; Blockquotes are very handy in email to emulate reply text.
+&amp;gt; This line is part of the same quote.
+
+Quote break.
+
+&amp;gt; This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Blockquotes are very handy in email to emulate reply text.
+This line is part of the same quote.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Quote break.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can &lt;em&gt;put&lt;/em&gt; &lt;strong&gt;Markdown&lt;/strong&gt; into a blockquote.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;inline&quot;&gt;Inline HTML&lt;/h2&gt;
+
+&lt;p&gt;You can also use raw HTML in your Markdown, and it'll mostly work pretty well.&lt;/p&gt;
+
+&lt;div class=&quot;regular-sans highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;dl&amp;gt;
+  &amp;lt;dt&amp;gt;Definition list&amp;lt;/dt&amp;gt;
+  &amp;lt;dd&amp;gt;Is something people use sometimes.&amp;lt;/dd&amp;gt;
+
+  &amp;lt;dt&amp;gt;Markdown in HTML&amp;lt;/dt&amp;gt;
+  &amp;lt;dd&amp;gt;Does *not* work **very** well. Use HTML &amp;lt;em&amp;gt;tags&amp;lt;/em&amp;gt;.&amp;lt;/dd&amp;gt;
+&amp;lt;/dl&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You can also use raw HTML in your Markdown, and it'll mostly work pretty well.&lt;/p&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;Definition list&lt;/dt&gt;
+  &lt;dd&gt;Is something people use sometimes.&lt;/dd&gt;
+
+  &lt;dt&gt;Markdown in HTML&lt;/dt&gt;
+  &lt;dd&gt;Does *not* work **very** well. Use HTML &lt;em&gt;tags&lt;/em&gt;.&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;h3 id=&quot;hr&quot;&gt;Horizontal Rule&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;div class=&quot;regular-sans highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Three or more...
+
+---
+
+Hyphens
+
+***
+
+Asterisks
+
+___
+
+Underscores
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Three or more…&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Hyphens&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Asterisks&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Underscores&lt;/p&gt;
+
+&lt;h3 id=&quot;br&quot;&gt;Line Breaks&lt;/h3&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;My basic recommendation for learning how line breaks work is to experiment and discover – hit &lt;Enter&gt; once (i.e., insert one newline), then hit it twice (i.e., insert two newlines), see what happens. You'll soon learn to get what you want. &quot;Markdown Toggle&quot; is your friend.&lt;/Enter&gt;&lt;/p&gt;
+
+&lt;p&gt;Here are some things to try out:&lt;/p&gt;
+
+&lt;div class=&quot;regular-sans highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Here's a line for us to start with.
+
+This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
+
+This line is also a separate paragraph, but...
+This line is only separated by a single newline, so it's a separate line in the *same paragraph*.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here's a line for us to start with.&lt;/p&gt;
+
+&lt;p&gt;This line is separated from the one above by two newlines, so it will be a &lt;em&gt;separate paragraph&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;This line is also a separate paragraph, but…
+This line is only separated by a single newline, so it's a separate line in the &lt;em&gt;same paragraph&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;License: CC-BY&lt;/p&gt;</content><author><name></name></author><category term="markdown" /><summary type="html">This is intended as a quick reference and showcase.</summary></entry></feed>
